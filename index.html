@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f2ff" />
+  <title>SRIDEVI Official | Download App</title>
+  <meta name="description" content="Download the official SRIDEVI Android app." />
+  <style>
+    * { box-sizing: border-box; }
+    :root {
+      --purple: #6500ed;
+      --pink: #ec00a5;
+      --red: #ff2525;
+      --ink: #171727;
+      --muted: #777587;
+    }
+    body {
+      margin: 0;
+      padding: 28px 16px;
+      min-height: 100vh;
+      background: #f5f1ff;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .page {
+      width: min(100%, 836px);
+      margin: 0 auto;
+      padding: 38px 34px 42px;
+      border-radius: 62px;
+      background: linear-gradient(145deg, #fff 0%, #fff 72%, #fdfbff 100%);
+      box-shadow: 0 22px 70px rgba(76, 32, 150, .08);
+      text-align: center;
+      overflow: hidden;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      text-align: left;
+      margin-bottom: 18px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-size: 21px; font-weight: 650; letter-spacing: -.7px; }
+    .brand-dot { width: 38px; height: 38px; border-radius: 50%; background: #f0e5ff; display: grid; place-items: center; }
+    .brand-dot::after { content: ""; width: 22px; height: 22px; border-radius: 50%; background: var(--purple); }
+    .official-pill { padding: 13px 25px; border-radius: 40px; background: #f3eaff; color: #5700b9; font-size: 19px; white-space: nowrap; }
+    .logo {
+      width: min(100%, 350px); height: 265px; margin: 18px auto 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .logo img {
+      display: block; width: 100%; height: 100%; object-fit: contain;
+      border-radius: 18px; filter: drop-shadow(0 10px 18px rgba(0,0,0,.12));
+    }
+    h1 { margin: 14px 0 0; color: #dc0000; font-size: clamp(42px, 7vw, 68px); line-height: 1.05; font-weight: 650; letter-spacing: -3px; }
+    .official-line { display: flex; align-items: center; justify-content: center; gap: 20px; color: #4c4b5c; font-size: 27px; letter-spacing: 9px; margin-top: 4px; }
+    .official-line::before, .official-line::after { content: ""; width: 66px; height: 1px; background: #aaa8b5; }
+    .subtitle { color: var(--muted); font-size: 31px; margin: 13px 0 20px; }
+    .price { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 310px; padding: 13px 35px; border-radius: 70px; background: #fff; box-shadow: 0 12px 35px rgba(32, 20, 70, .10); color: #5b00bf; font-size: 68px; font-weight: 550; letter-spacing: -3px; }
+    .rupee { color: #ff9d00; font-weight: 800; }
+    .qualities { display: flex; justify-content: center; gap: 38px; flex-wrap: wrap; margin: 24px 0 34px; color: #4b4960; font-size: 24px; }
+    .quality { display: flex; align-items: center; gap: 11px; }
+    .dot { width: 19px; height: 19px; border-radius: 50%; display: inline-block; }
+    .download {
+      display: flex; align-items: center; justify-content: center; position: relative;
+      min-height: 130px; padding: 20px 94px 20px 24px; border-radius: 39px;
+      color: #fff; text-decoration: none; font-size: clamp(27px, 5vw, 42px); font-weight: 650;
+      letter-spacing: -1.5px; background: linear-gradient(105deg, #6500ff 0%, #c000c9 54%, #ff2424 100%);
+      box-shadow: 0 14px 26px rgba(150, 0, 220, .18); transition: transform .18s ease, filter .18s ease;
+    }
+    .download:hover { transform: translateY(-2px); filter: brightness(1.04); }
+    .download-icon { position: absolute; right: 28px; width: 78px; height: 78px; border-radius: 27px; border: 1px solid rgba(255,255,255,.55); background: rgba(255,255,255,.17); display: grid; place-items: center; }
+    .download-icon svg { width: 43px; height: 43px; fill: none; stroke: #fff; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 28px; text-align: left; }
+    .feature { min-height: 175px; padding: 16px 28px 22px; border-radius: 32px; background: #fff; box-shadow: 0 12px 35px rgba(40, 30, 80, .055); }
+    .feature.wide { grid-column: 1 / -1; min-height: 148px; display: flex; align-items: center; gap: 30px; }
+    .feature-icon { width: 92px; height: 92px; border-radius: 50%; display: grid; place-items: center; font-size: 45px; margin-bottom: 8px; flex: 0 0 auto; }
+    .feature.wide .feature-icon { margin: 0; }
+    .feature h2 { margin: 0 0 4px; font-size: 26px; font-weight: 600; letter-spacing: -1px; }
+    .feature p { margin: 0; color: var(--muted); font-size: 21px; line-height: 1.35; }
+    footer { color: #6e6b80; font-size: 22px; margin-top: 36px; }
+    footer small { display: block; font-size: 18px; margin-top: 12px; }
+    @media (max-width: 600px) {
+      body { padding: 12px 8px; }
+      .page { padding: 24px 18px 30px; border-radius: 38px; }
+      .brand { font-size: 16px; gap: 8px; }
+      .brand-dot { width: 30px; height: 30px; }
+      .brand-dot::after { width: 17px; height: 17px; }
+      .official-pill { font-size: 13px; padding: 10px 15px; }
+      .logo { width: min(100%, 300px); height: 225px; margin-top: 22px; }
+      h1 { letter-spacing: -2px; }
+      .official-line { font-size: 19px; letter-spacing: 6px; gap: 12px; }
+      .official-line::before, .official-line::after { width: 38px; }
+      .subtitle { font-size: 23px; }
+      .price { min-width: 235px; font-size: 53px; padding: 10px 24px; }
+      .qualities { gap: 18px; font-size: 17px; margin: 22px 0 28px; }
+      .dot { width: 14px; height: 14px; }
+      .download { min-height: 92px; border-radius: 29px; padding-right: 76px; font-size: 27px; }
+      .download-icon { width: 58px; height: 58px; right: 17px; border-radius: 20px; }
+      .download-icon svg { width: 34px; height: 34px; }
+      .features { gap: 12px; margin-top: 20px; }
+      .feature { min-height: 155px; padding: 14px 16px 18px; border-radius: 25px; }
+      .feature-icon { width: 66px; height: 66px; font-size: 34px; }
+      .feature h2 { font-size: 19px; }
+      .feature p { font-size: 15px; }
+      .feature.wide { min-height: 120px; gap: 17px; }
+      footer { font-size: 17px; margin-top: 28px; }
+      footer small { font-size: 14px; }
+    }
+    @media (max-width: 370px) {
+      .brand { font-size: 14px; }
+      .official-pill { font-size: 11px; padding: 9px 11px; }
+      .feature { padding-left: 12px; padding-right: 12px; }
+      .feature p { font-size: 13px; }
+    }
+  </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1659367345970465');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1659367345970465&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand"><span class="brand-dot"></span><span>SRIDEVI Official</span></div>
+      <div class="official-pill">OFFICIAL APP</div>
+    </header>
+
+    <div class="logo"><img src="./sridevi-logo.jpg" alt="SRIDEVI official logo"></div>
+
+    <h1>SRIDEVI</h1>
+    <div class="official-line">OFFICIAL</div>
+    <p class="subtitle">Mini Amount App</p>
+
+    <div class="price"><span class="rupee">₹</span><span>100/-</span></div>
+
+    <div class="qualities">
+      <div class="quality"><span class="dot" style="background:#ff9f00"></span>Simple</div>
+      <div class="quality"><span class="dot" style="background:#6900ef"></span>Fast</div>
+      <div class="quality"><span class="dot" style="background:#078bf4"></span>Secure</div>
+    </div>
+
+    <a class="download" href="https://shridevi.shop/app/shridevi.apk" download>
+      <span>Download App</span>
+      <span class="download-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><path d="M24 5v25m0 0 10-10m-10 10L14 20M7 34v7h34v-7"/></svg>
+      </span>
+    </a>
+
+    <section class="features">
+      <article class="feature">
+        <div class="feature-icon" style="background:#fff0d5;color:#ff9f00">ϟ</div>
+        <h2>Quick Access</h2>
+        <p>Fast &amp; smooth experience</p>
+      </article>
+      <article class="feature">
+        <div class="feature-icon" style="background:#f1ddff;color:#6500d9">✓</div>
+        <h2>Easy Use</h2>
+        <p>Simple interface</p>
+      </article>
+      <article class="feature wide">
+        <div class="feature-icon" style="background:#f1ddff">🚀</div>
+        <div>
+          <h2>Lightweight App</h2>
+          <p>Fast loading on Android devices</p>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      Android App&nbsp; • &nbsp;Official Download
+      <small>Only install apps from sources you trust.</small>
+    </footer>
+  </main>
+</body>
+</html>
